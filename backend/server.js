@@ -372,14 +372,10 @@ mongoose
 
 dotenv.config()
 
-const bcrypt = require("bcryptjs")
-const jwt = require("jsonwebtoken")
-const crypto = require("crypto")
 
-const User = require("./models/User")
-const Notification = require("./models/Notification")
-const { sendPasswordResetEmail } = require("./services/email")
-const { auth, adminOnly } = require("./middleware/auth")
+
+
+
 
 const productRoutes = require("./routes/products")
 const serviceRoutes = require("./routes/services")
