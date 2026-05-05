@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark *));
+
+:root {
+  --admin-primary: #0f172a;
+  --admin-surface: #1e293b;
+  --admin-border: #334155;
+  --admin-muted: #64748b;
+  --admin-background: #f8fafc;
+}
+
+.dark {
+  --admin-background: #0f172a;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--admin-background);
+  color: #0f172a;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dark body {
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
